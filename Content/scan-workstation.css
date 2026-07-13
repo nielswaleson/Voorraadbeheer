@@ -1,0 +1,189 @@
+.scan-page { max-width: 1100px; }
+.scan-header h2 { margin: 0 0 0.35rem 0; }
+.scan-hint { color: #666; font-size: 0.9rem; margin: 0 0 1rem 0; line-height: 1.5; }
+
+.scan-input-wrap { margin-bottom: 0.75rem; }
+.scan-input-wrap label { display: block; font-size: 0.8rem; color: #555; margin-bottom: 0.25rem; }
+.scan-input {
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.scan-status {
+    padding: 0.6rem 0.9rem;
+    border-radius: 6px;
+    background: #eef6fc;
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+}
+.scan-status.ok { background: #e8f8ef; color: #1e7e46; }
+.scan-status.err { background: #fdecea; color: #c0392b; }
+.scan-status.warn { background: #fff8e6; color: #9a7b00; }
+
+.session-bars {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+}
+.session-bar {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.9rem;
+}
+.session-label { color: #888; margin-right: 0.35rem; }
+.btn-link {
+    border: none;
+    background: none;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 0.85rem;
+    text-decoration: underline;
+}
+
+.artikel-keuze {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.artikel-keuze-title { margin: 0 0 0.25rem 0; font-size: 1.1rem; }
+.artikel-keuze-soort { margin: 0 0 0.75rem 0; color: #666; font-size: 0.9rem; }
+
+.artikel-kaarten {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+}
+.artikel-kaart {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+    padding: 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+    cursor: pointer;
+    overflow: hidden;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+.artikel-kaart:hover:not(:disabled) {
+    border-color: #3498db;
+    box-shadow: 0 2px 8px rgba(52,152,219,0.2);
+}
+.artikel-kaart.selected {
+    border-color: #3498db;
+    background: #eef6fc;
+    box-shadow: 0 0 0 2px rgba(52,152,219,0.25);
+}
+.artikel-kaart.alarm:not(.selected) { border-color: #e8b4b4; }
+.artikel-kaart.inactief { opacity: 0.55; cursor: not-allowed; }
+
+.kaart-foto {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    display: block;
+    background: #eee;
+}
+.artikel-kaart.no-foto .kaart-body { padding-top: 0.75rem; }
+.kaart-body { padding: 0.5rem 0.6rem 0.6rem; display: flex; flex-direction: column; gap: 0.15rem; }
+.kaart-naam { font-size: 0.8rem; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.kaart-meta { font-size: 0.7rem; color: #888; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kaart-aantal { font-size: 0.85rem; font-weight: 700; color: #2c3e50; }
+.kaart-aantal.laag { color: #c0392b; }
+.kaart-alarm, .kaart-inactief {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+.kaart-alarm { color: #c0392b; }
+.kaart-inactief { color: #888; }
+
+.artikel-panel {
+    display: flex;
+    gap: 1.25rem;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.artikel-photo-wrap { flex: 0 0 160px; }
+.artikel-foto {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+.artikel-foto-placeholder {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    border-radius: 8px;
+    color: #999;
+    font-size: 0.85rem;
+}
+.artikel-info { flex: 1; min-width: 0; }
+.artikel-info h3 { margin: 0 0 0.35rem 0; }
+.artikel-meta, .artikel-omschrijving { color: #666; font-size: 0.9rem; margin: 0.25rem 0; }
+
+.bak-totaal-row { margin-top: 0.25rem; }
+.voorraad-aantal.bak-totaal { font-size: 1.75rem; }
+.voorraad-label { display: block; font-size: 0.8rem; color: #888; }
+.voorraad-aantal { font-size: 2.5rem; font-weight: 700; color: #2c3e50; line-height: 1.1; }
+.voorraad-aantal.alarm { color: #e74c3c; }
+
+.alarm-info { font-size: 0.85rem; color: #888; margin: 0 0 0.75rem 0; }
+.alarm-info.active { color: #c0392b; font-weight: 600; }
+
+.voorraad-actions { display: flex; flex-direction: column; gap: 0.5rem; }
+.action-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.btn-action {
+    padding: 0.45rem 0.85rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.btn-action.primary { background: #3498db; color: #fff; border-color: #2980b9; }
+.btn-remove.primary { background: #e74c3c; border-color: #c0392b; color: #fff; }
+.btn-add { background: #27ae60; border-color: #1e8449; color: #fff; }
+.qty-inline { display: flex; align-items: center; gap: 0.35rem; font-size: 0.9rem; }
+.qty-input { width: 48px; padding: 0.35rem; text-align: center; }
+.qty-input-wide { width: 64px; }
+.actie-hint { font-size: 0.8rem; color: #888; margin: 0.75rem 0 0 0; }
+
+.scan-log {
+    border-top: 1px solid #ddd;
+    padding-top: 0.75rem;
+    max-height: 180px;
+    overflow-y: auto;
+}
+.scan-log-line { font-size: 0.8rem; color: #666; padding: 0.15rem 0; }
+.scan-log-line.err { color: #c0392b; }
+.scan-log-line.warn { color: #9a7b00; }
+.scan-log-line.ok { color: #1e7e46; }
+
+@media (max-width: 640px) {
+    .artikel-panel { flex-direction: column; }
+    .artikel-photo-wrap { flex: none; }
+}

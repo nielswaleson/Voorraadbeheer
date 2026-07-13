@@ -1,0 +1,45 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="YourProject.SiteMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <style>
+        body { font-family: Segoe UI, Arial, sans-serif; margin: 0; background: #f5f5f5; }
+        .header { background: #2c3e50; color: #fff; padding: 1rem 2rem; }
+        .header h1 { margin: 0 0 0.75rem 0; font-size: 1.5rem; }
+        .nav { display: flex; gap: 0.5rem; }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.1);
+        }
+        .nav a:hover, .nav a.active { background: #3498db; }
+        .content { padding: 2rem; max-width: 1400px; margin: 0 auto; }
+        .welcome { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header class="header">
+            <h1>Voorraadbeheer</h1>
+            <nav class="nav">
+                <asp:HyperLink ID="lnkHome" runat="server" NavigateUrl="~/Default.aspx" Text="Start" />
+                <asp:HyperLink ID="lnkPersonen" runat="server" NavigateUrl="~/Personen.aspx" Text="Personen" />
+                <asp:HyperLink ID="lnkLeveranciers" runat="server" NavigateUrl="~/Leveranciers.aspx" Text="Leveranciers" />
+                <asp:HyperLink ID="lnkArtikelen" runat="server" NavigateUrl="~/Artikelen.aspx" Text="Artikelen" />
+                <asp:HyperLink ID="lnkVoorraad" runat="server" NavigateUrl="~/Voorraad.aspx" Text="Voorraad" />
+                <asp:HyperLink ID="lnkLog" runat="server" NavigateUrl="~/Log.aspx" Text="Log" />
+                <asp:HyperLink ID="lnkAlarm" runat="server" NavigateUrl="~/Alarm.aspx" Text="Alarm" />
+            </nav>
+        </header>
+        <main class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </main>
+    </form>
+</body>
+</html>
