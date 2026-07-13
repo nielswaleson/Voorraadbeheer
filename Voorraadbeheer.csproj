@@ -73,6 +73,7 @@
     <Content Include="Content\scan-workstation.css" />
     <Content Include="Content\sheet-grid.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Leveranciers.aspx" />
     <Content Include="Log.aspx" />
     <Content Include="Personen.aspx" />
@@ -88,6 +89,10 @@
     <Content Include="Site.Master" />
     <Content Include="Voorraad.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Scripts\init-schema.sql" />
+    <Content Include="Scripts\migrate-voorraad-locatie.sql" />
+    <Content Include="Scripts\migrate-barcodes-soort.sql" />
+    <Content Include="Scripts\migrate-alarm-per-bak.sql" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alarm.aspx.cs">
@@ -100,6 +105,10 @@
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatabaseBootstrap.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
