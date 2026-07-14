@@ -1,4 +1,4 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -70,6 +70,7 @@
     <Content Include="Alarm.aspx" />
     <Content Include="ArtikelFoto.ashx" />
     <Content Include="Artikelen.aspx" />
+    <Content Include="Beheer.aspx" />
     <Content Include="Content\scan-workstation.css" />
     <Content Include="Content\sheet-grid.css" />
     <Content Include="Default.aspx" />
@@ -77,6 +78,7 @@
     <Content Include="Leveranciers.aspx" />
     <Content Include="Log.aspx" />
     <Content Include="Personen.aspx" />
+    <Content Include="Scripts\beheer-page.js" />
     <Content Include="Scripts\alarm-page.js" />
     <Content Include="Scripts\artikelen-fotos.js" />
     <Content Include="Scripts\artikelen-grid.js" />
@@ -105,6 +107,13 @@
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Beheer.aspx.cs">
+      <DependentUpon>Beheer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Beheer.aspx.designer.cs">
+      <DependentUpon>Beheer.aspx</DependentUpon>
     </Compile>
     <Compile Include="DatabaseBootstrap.cs" />
     <Compile Include="Global.asax.cs">
@@ -151,6 +160,7 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="TestDataSeeder.cs" />
     <Compile Include="Voorraad.aspx.cs">
       <DependentUpon>Voorraad.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

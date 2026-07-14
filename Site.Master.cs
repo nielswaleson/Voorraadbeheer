@@ -16,6 +16,7 @@ namespace YourProject
             lnkVoorraad.CssClass = page == "voorraad.aspx" ? "active" : "";
             lnkLog.CssClass = page == "log.aspx" ? "active" : "";
             lnkAlarm.CssClass = page == "alarm.aspx" ? "active" : "";
+            lnkBeheer.CssClass = page == "beheer.aspx" ? "active" : "";
         }
     }
 }

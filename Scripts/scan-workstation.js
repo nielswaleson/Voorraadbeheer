@@ -311,6 +311,7 @@
         input.addEventListener('keydown', function (e) {
             if (e.key === 'Enter') { e.preventDefault(); processScan(input.value); }
         });
+        input.addEventListener('search', function () { processScan(input.value); });
         document.addEventListener('click', function (e) {
             if (e.target.closest('button, a, input, select, label, .artikel-kaart')) return;
             focusScan();

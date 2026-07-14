@@ -35,6 +35,7 @@
                 <asp:HyperLink ID="lnkVoorraad" runat="server" NavigateUrl="~/Voorraad.aspx" Text="Voorraad" />
                 <asp:HyperLink ID="lnkLog" runat="server" NavigateUrl="~/Log.aspx" Text="Log" />
                 <asp:HyperLink ID="lnkAlarm" runat="server" NavigateUrl="~/Alarm.aspx" Text="Alarm" />
+                <asp:HyperLink ID="lnkBeheer" runat="server" NavigateUrl="~/Beheer.aspx" Text="Beheer" />
             </nav>
         </header>
         <main class="content">

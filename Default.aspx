@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="YourProject.Default" MasterPageFile="~/Site.Master" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="YourProject.Default" MasterPageFile="~/Site.Master" %>
 
 <asp:Content ID="TitleContent" ContentPlaceHolderID="TitleContent" runat="server">
     Voorraad scan
@@ -22,7 +22,7 @@
 
         <div class="scan-input-wrap">
             <label for="scanInput">Barcode</label>
-            <input type="text" id="scanInput" class="scan-input" autocomplete="off" autofocus placeholder="Scan barcode..." />
+            <input type="search" id="scanInput" class="scan-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" autofocus placeholder="Scan barcode..." />
         </div>
 
         <div id="scanStatus" class="scan-status">Scan persoon (P...) -&gt; bak (L...) -&gt; kies artikel</div>
@@ -73,14 +73,14 @@
                     </div>
                     <div class="action-row">
                         <label class="qty-inline">
-                            +<input type="number" id="qtyAdd" min="1" value="1" class="qty-input" />
+                            +<input type="number" id="qtyAdd" min="1" value="1" class="qty-input" tabindex="-1" enterkeyhint="done" inputmode="numeric" />
                             <button type="button" id="btnAddN" class="btn-action btn-add">Toevoegen</button>
                         </label>
                     </div>
                     <div class="action-row">
                         <label class="qty-inline">
                             Corrigeer naar
-                            <input type="number" id="qtySet" min="0" value="0" class="qty-input qty-input-wide" />
+                            <input type="number" id="qtySet" min="0" value="0" class="qty-input qty-input-wide" tabindex="-1" enterkeyhint="done" inputmode="numeric" />
                             <button type="button" id="btnSetQty" class="btn-action">Instellen</button>
                         </label>
                     </div>

@@ -11,6 +11,14 @@
     border: 2px solid #3498db;
     border-radius: 8px;
     box-sizing: border-box;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.scan-input::-webkit-search-cancel-button,
+.scan-input::-webkit-search-decoration {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
 }
 
 .scan-status {

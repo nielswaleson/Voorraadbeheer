@@ -16,5 +16,6 @@ namespace YourProject
         protected global::System.Web.UI.WebControls.HyperLink lnkVoorraad;
         protected global::System.Web.UI.WebControls.HyperLink lnkLog;
         protected global::System.Web.UI.WebControls.HyperLink lnkAlarm;
+        protected global::System.Web.UI.WebControls.HyperLink lnkBeheer;
     }
 }
